@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<style type>
+
+    body
+    {
+
+    background-image: url('Background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+
+    }
+
+    .centered
+    {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      margin-top: -50px;
+      margin-left: -100px;
+    }
+
+    label 
+    { 
+        float: left; 
+        background: #ffff00;
+        width: 150px;
+    }
+  	legend 
+    {
+        font-size: 16px;
+        display: block;
+        padding-left: 100px;
+        padding-right: 100px;
+     }
+
+</style>
+
+<script>
+    function See() {
+
+        if (document.getElementById("checkbox").checked)
+
+        {
+            document.getElementById("password").type = "text"
+        }
+
+        if (!document.getElementById("checkbox").checked)
+
+        {
+            document.getElementById("password").type = "password"
+        }
+
+    }
+</script>
+
+<h2> C.R.I  Registration Form</h2>
+    <body>
+        <form action="registration.php" method="post">
+
+                <label for="firstName"> First Name </label>
+                <input type=text name="firstName">
+                <br>
+                <br>
+
+                <label for="lastName"> Last Name </label>
+                <input type=text name="lastName">
+                <br>
+                <br>
+
+                <label for="username"> Username </label>
+                <input type=text name="username">
+                <br>
+                <br>
+
+                <label for="password"> Password </label>
+                <input type=password name="password" id="password">
+
+                <input type="hidden" name="type" value="register">
+                
+                <input onclick="See()" type=checkbox id="checkbox">
+                <br>
+                <br>
+
+                <input type=submit value="Submit">
+                               
+        </form>
+    </body>
+</html>
