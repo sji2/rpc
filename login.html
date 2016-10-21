@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html>
+
 <style type>
 
     body
     {
 
-    background-image: url('Background.jpg');
+    background-color: #00c7dc;
+    /*background-image: url('images/Background.jpg');
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-position: center;
+    background-position: center;*/
 
+    }
+
+    .logo
+    {
+    display: block;
+    position: absolute;
+    top: center;
+    left: center;
+    /*margin-left:auto;
+    margin-right:auto;*/
+    }
+
+    form 
+    { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width:250px;
     }
 
     .centered
@@ -24,10 +44,10 @@
     label 
     { 
         float: left; 
-        background: #ffff00;
+        /*background: #ffff00;*/
         width: 150px;
     }
-  	legend 
+    legend 
     {
         font-size: 16px;
         display: block;
@@ -38,6 +58,8 @@
 </style>
 
 <script>
+
+    
     function See() {
 
         if (document.getElementById("checkbox").checked)
@@ -52,14 +74,16 @@
             document.getElementById("password").type = "password"
         }
 
+
     }
 </script>
 
-<h2> C.R.I </h2>
     <body>
+        
+        <h1 class="logo"><img src="images/CRIresize.png" alt="C.R.I. logo"></h1>
+
         <form action="login.php" method="post">
 
-                
                 <label for="username"> Username </label>
                 <input type=text name="username">
                 <br>
